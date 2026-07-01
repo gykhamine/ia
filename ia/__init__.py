@@ -52,6 +52,7 @@ from .config import get_config, ensure_directories, MODELS_DIR, MODEL_EXTENSION
 
 # --- Moteur C++ ---
 from . import cpp
+from .cpp import get_core
 
 # --- Sous-modules ---
 from .dataset import load_dataset, supported_formats, dataset_info
@@ -125,6 +126,8 @@ predict_mlp = infer.predict_mlp
 __all__ = [
     # Config
     "get_config", "ensure_directories", "MODELS_DIR", "MODEL_EXTENSION",
+    # Moteur C++
+    "get_core",
     # V3 : API unifiée
     "Trainer", "Model",
     "callbacks", "ia_format",
